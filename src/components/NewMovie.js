@@ -35,7 +35,7 @@ const NewMovie = (props) => {
 
       <form onSubmit={submitHandler}>
         <div>
-          Name:{" "}
+          Director Name:{" "}
           <input type="text" value={enteredName} onChange={onChangeName} />
         </div>
         <div>
