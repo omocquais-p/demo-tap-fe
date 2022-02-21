@@ -7,9 +7,9 @@ console.log(props.movie);
 console.log(props.movie.name);
 
     return (        
-        <Fragment>
-            <h1>Name: {props.movie.name}</h1>
-            <h2>Title: {props.movie.title}</h2>
+        <Fragment>            
+            <h1>Title: {props.movie.title}</h1>
+            <h2>Director Name: {props.movie.name}</h2>
         </Fragment>
     )
 }
