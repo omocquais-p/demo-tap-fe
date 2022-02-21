@@ -20,7 +20,7 @@ const MovieList = () => {
 
     const fetchMoviesHandler = useCallback(async () => {
         setIsLoading(true);
-        const response = await fetch('http://api-demo-be.apps.omocquais-demos-tap.calatrava.vmware.com/films/')
+        const response = await fetch('http://api-demo-back-end.apps.omocquais-demos-tap.calatrava.vmware.com/films/')
         const data = await response.json();
         const transformData = data.map(movieData => {
             return {
