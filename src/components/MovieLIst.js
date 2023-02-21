@@ -21,9 +21,9 @@ const MovieList = () => {
 
     const fetchMoviesHandler = useCallback(async () => {
         setIsLoading(true);
-        console.log("#############");
+        console.log("#### API-URL ######");
         console.log(apiUrl);
-        const response = await fetch('https://demo-tap-be.workload5.gke.tap.io/films/')
+        const response = await fetch(apiUrl)
         const data = await response.json();
         const transformData = data.map(movieData => {
             return {
