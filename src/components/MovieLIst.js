@@ -4,6 +4,7 @@ import MovieItem from "./MovieItem";
 import NewMovie from "./NewMovie";
 import { useState, useEffect, useCallback } from "react";
 
+const apiUrl = process.env.REACT_APP_API_URL
 
 const MovieList = () => {
     const DUMMY_MOVIES = [{'name': 'alligator', 'title': 'movie 1'}];
@@ -20,6 +21,8 @@ const MovieList = () => {
 
     const fetchMoviesHandler = useCallback(async () => {
         setIsLoading(true);
+        console.log("#############");
+        console.log(apiUrl);
         const response = await fetch('https://demo-tap-be.workload5.gke.tap.io/films/')
         const data = await response.json();
         const transformData = data.map(movieData => {
